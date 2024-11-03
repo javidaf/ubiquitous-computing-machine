@@ -20,14 +20,14 @@ def fit_gam(X, y, df_spline=[4, 8], random_state=42, spline_type=3):
 
     for df in df_spline:
         gam = GAM(
-            s(0, n_splines=df, spline_type=spline_type)
-            + s(1, n_splines=df, spline_type=spline_type)
-            + s(2, n_splines=df, spline_type=spline_type)
-            + s(3, n_splines=df, spline_type=spline_type)
-            + s(4, n_splines=df, spline_type=spline_type)
-            + s(5, n_splines=df, spline_type=spline_type)
-            + s(6, n_splines=df, spline_type=spline_type)
-            + s(7, n_splines=df, spline_type=spline_type)
+            s(0, n_splines=df, spline_order=spline_type)
+            + s(1, n_splines=df, spline_order=spline_type)
+            + s(2, n_splines=df, spline_order=spline_type)
+            + s(3, n_splines=df, spline_order=spline_type)
+            + s(4, n_splines=df, spline_order=spline_type)
+            + s(5, n_splines=df, spline_order=spline_type)
+            + s(6, n_splines=df, spline_order=spline_type)
+            + s(7, n_splines=df, spline_order=spline_type)
         )
 
         gam.fit(X_train, y_train)
